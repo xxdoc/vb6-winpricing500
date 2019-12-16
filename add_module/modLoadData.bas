@@ -140,7 +140,7 @@ Dim I As Long
 '    'C.ItemData(I) = TempData.KEY_ID
 '   End If
 
-'   If MasterArea = 34 Then ' เพิ่มในเอกสารการเบิก ST007  เพื่อให้ค่า InventoryDoc_Sub_Type =null (ค่าที่ออกมา เป็น -1) คือ การเบิกที่ไม่ได้เบิกจากDatabase ในที่นี้จะเบิกจาก barcode
+'   If MasterArea = 34 Then ' เพิ่มในเอกสารการเบิก ST007  เพื่อให้ค่า InventoryDoc_Sub_Type =null (ค่าที่ออกมา เป็น -1) คือ การเบิกที่ไม่ได้เบิกจากDatabase ในที่นี้จะเบิกจาก barcode    ------------------> Test
 '       I = I + 1
 '     Set TempData = New CMasterRef
 '     Call TempData.PopulateFromRS(1, Rs)
