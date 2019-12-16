@@ -1,0 +1,1071 @@
+2017/08/21 13:14:35  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2017/08/21 13:14:38  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2017/08/21 13:15:16  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2017/08/21 13:15:40  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/08/21 13:15:41  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/09/26 17:12:30  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/09/26 17:12:32  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/11/21 09:39:07  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/11/21 09:39:08  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/11/21 09:40:26  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/11/21 09:40:52  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2017/11/21 09:49:16  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/11/21 09:49:59  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2017/11/21 09:50:18  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2017/11/21 09:50:20  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2017/11/21 09:50:27  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2017/11/21 09:51:21  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <No defined database path ("data source")
+>
+2017/11/22 10:09:08  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT SUM(DI.ITEM_AMOUNT) TOTAL_AMOUNT ,SUM(DI.TOTAL_PRICE) TOTAL_PRICE,SUM(DI.DISCOUNT_AMOUNT) DISCOUNT_AMOUNT ,SUM(DI.EXTRA_DISCOUNT_AMOUNT) EXT_DISCOUNT_AMOUNT ,SUM(DI.VAT_AMOUNT) VAT_AMOUNT ,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_NAME,MR3.KEY_NAME UNIT_CHANGE_NAME ,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE  > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+DI.VAT_AMOUNT
+At line 1, column 173
+IBCODE=isc_dsql_error
+>
+2017/11/22 10:09:10  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT SUM(DI.ITEM_AMOUNT) TOTAL_AMOUNT ,SUM(DI.TOTAL_PRICE) TOTAL_PRICE,SUM(DI.DISCOUNT_AMOUNT) DISCOUNT_AMOUNT ,SUM(DI.EXTRA_DISCOUNT_AMOUNT) EXT_DISCOUNT_AMOUNT ,SUM(DI.VAT_AMOUNT) VAT_AMOUNT ,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_NAME,MR3.KEY_NAME UNIT_CHANGE_NAME ,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE  > : System error message <Operation is not allowed when the object is closed.>
+2017/11/22 10:09:18  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT SUM(DI.ITEM_AMOUNT) TOTAL_AMOUNT ,SUM(DI.TOTAL_PRICE) TOTAL_PRICE,SUM(DI.DISCOUNT_AMOUNT) DISCOUNT_AMOUNT ,SUM(DI.EXTRA_DISCOUNT_AMOUNT) EXT_DISCOUNT_AMOUNT ,SUM(DI.VAT_AMOUNT) VAT_AMOUNT ,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_NAME,MR3.KEY_NAME UNIT_CHANGE_NAME ,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE  > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+DI.VAT_AMOUNT
+At line 1, column 173
+IBCODE=isc_dsql_error
+>
+2017/11/22 10:09:19  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT SUM(DI.ITEM_AMOUNT) TOTAL_AMOUNT ,SUM(DI.TOTAL_PRICE) TOTAL_PRICE,SUM(DI.DISCOUNT_AMOUNT) DISCOUNT_AMOUNT ,SUM(DI.EXTRA_DISCOUNT_AMOUNT) EXT_DISCOUNT_AMOUNT ,SUM(DI.VAT_AMOUNT) VAT_AMOUNT ,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_NAME,MR3.KEY_NAME UNIT_CHANGE_NAME ,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) WHERE  (NM.DOCUMENT_TYPE IN (3,4,6))AND  (APM.APAR_CODE >= '09-010847')AND  (APM.APAR_CODE <= '09-010847')AND  (NM.DOCUMENT_DATE >= '2017-10-02 00:00:00')AND  (NM.DOCUMENT_DATE <= '2017-10-02 23:59:59')AND  (NM.CANCEL_FLAG = 'N') GROUP BY SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME ,MR3.KEY_NAME,NM.DOCUMENT_TYPE,DI.FREE_FLAG,APM.APAR_CODE  > : System error message <Operation is not allowed when the object is closed.>
+2017/11/22 10:57:49  Project name <Xivess> : Module name <frmReport> :Routine name <Form_Load> : Local error message <ไม่พบบัญชีรายชื่อผู้ใช้นี้ในฐานข้อมูล> : System error message <This key is already associated with an element of this collection>
+2018/01/15 15:21:47  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2018/01/15 15:21:50  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2018/01/15 15:22:18  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2018/01/15 15:22:31  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Unable to complete network request to host "DD".
+Failed to locate host machine.
+The specified name was not found in the hosts file or Domain Name Services.
+IBCODE=isc_network_error
+>
+2018/01/15 15:22:57  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2018/01/15 15:23:08  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <Operation is not allowed when the object is open.>
+2018/01/15 15:23:48  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2018/01/15 15:23:51  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2019/04/29 12:48:16  Project name <Xivess> : Module name <clsDaily> :Routine name <DeleteBillingDoc> : Local error message <ไม่สามารถลบข้อมูลได้เนื่องจากข้อมูลนี้ยังถูกอ้างถึงอยู่จากส่วนอื่น> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BD_BILLING_DOC_PACK_FK" on table "BILLING_DOC"
+Foreign key references are present for the record
+IBCODE=isc_foreign_key
+>
+2019/07/11 13:49:08  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditMasterRef> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 370
+,
+IBCODE=isc_dsql_error
+>
+2019/07/11 13:49:54  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditMasterRef> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-625:
+validation error for column CASH_DELIVERY_FLAG, value " "
+IBCODE=isc_not_valid
+>
+2019/07/11 13:50:10  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditMasterRef> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-625:
+validation error for column CASH_DELIVERY_FLAG, value " "
+IBCODE=isc_not_valid
+>
+2019/07/11 14:51:03  Project name <Xivess> : Module name <frmMasterMain> :Routine name <UnboundReadData> : Local error message <> : System error message <Type mismatch>
+2019/07/12 09:30:03  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:30:06  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:30:07  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:30:43  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:30:50  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:30:51  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:31:11  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:31:14  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:31:15  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:31:31  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:31:39  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:31:48  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:32:31  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:32:34  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 09:32:35  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/12 15:03:48  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:03:51  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:04:49  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:04:54  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:05:42  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:05:44  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:05:58  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:05:59  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:06:10  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:06:12  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:06:46  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:06:46  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:07:00  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:07:01  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Invalid procedure call or argument>
+2019/07/12 15:10:45  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.* FROM NAME NM ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM NAME NM > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+EXTRA_DISCOUNT_NO
+At line 1, column 54
+IBCODE=isc_dsql_error
+>
+2019/07/12 15:12:02  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.* FROM NAME NM ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM NAME NM > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+EXTRA_DISCOUNT_NO
+At line 1, column 54
+IBCODE=isc_dsql_error
+>
+2019/07/12 15:12:06  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.* FROM NAME NM ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM NAME NM > : System error message <Operation is not allowed when the object is closed.>
+2019/07/12 15:12:08  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.* FROM NAME NM ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM NAME NM > : System error message <Operation is not allowed when the object is closed.>
+2019/07/17 10:49:06  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 10:49:09  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:19:09  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:19:12  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:19:37  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:19:45  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:21:55  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:21:57  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:23:50  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:23:51  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/17 11:23:54  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-625:
+validation error for column CASH_DELIVERY_FLAG, value " "
+IBCODE=isc_not_valid
+>
+2019/07/17 11:24:00  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditCustomer> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-625:
+validation error for column CASH_DELIVERY_FLAG, value " "
+IBCODE=isc_not_valid
+>
+2019/07/19 11:37:13  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.*,MR.KEY_CODE,MR.KEY_NAME FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+EXTRA_DISCOUNT_NO
+At line 1, column 155
+IBCODE=isc_dsql_error
+>
+2019/07/19 11:37:21  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.*,MR.KEY_CODE,MR.KEY_NAME FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) > : System error message <Operation is not allowed when the object is closed.>
+2019/07/19 11:37:23  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.*,MR.KEY_CODE,MR.KEY_NAME FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) ORDER BY EXTRA_DISCOUNT_NO  DESC  SQL2 -> SELECT COUNT(*) FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) > : System error message <Operation is not allowed when the object is closed.>
+2019/07/19 11:40:08  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.*,MR.KEY_CODE,MR.KEY_NAME FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) ORDER BY NM.KEY_CODE  DESC  SQL2 -> SELECT COUNT(*) FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+NM.KEY_CODE
+At line 1, column 139
+IBCODE=isc_dsql_error
+>
+2019/07/19 11:40:18  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.*,MR.KEY_CODE,MR.KEY_NAME FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) ORDER BY NM.KEY_CODE  DESC  SQL2 -> SELECT COUNT(*) FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) > : System error message <Operation is not allowed when the object is closed.>
+2019/07/19 11:40:20  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.*,MR.KEY_CODE,MR.KEY_NAME FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) ORDER BY NM.KEY_CODE  DESC  SQL2 -> SELECT COUNT(*) FROM EXTRA_DISCOUNT NM LEFT OUTER JOIN MASTER_REF MR ON (NM.DISCOUNT_TYPE_ID = MR.KEY_ID) > : System error message <Operation is not allowed when the object is closed.>
+2019/07/19 13:19:09  Project name <Xivess> : Module name <frmAddEditBillingDoc> :Routine name <UnboundReadData> : Local error message <> : System error message <Subscript out of range>
+2019/07/19 13:19:11  Project name <Xivess> : Module name <frmAddEditBillingDoc> :Routine name <UnboundReadData> : Local error message <> : System error message <Subscript out of range>
+2019/07/19 13:19:11  Project name <Xivess> : Module name <frmAddEditBillingDoc> :Routine name <UnboundReadData> : Local error message <> : System error message <Subscript out of range>
+2019/07/19 15:07:54  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:08:06  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:09:52  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:09:54  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:11:56  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:11:57  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:12:30  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:12:32  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:34:55  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:35:00  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:37:28  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:37:32  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+KEY_CODE
+At line 9, column 1
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:48:12  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 25, column 2
+33
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:48:20  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 25, column 2
+33
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:49:40  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 25, column 2
+38
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:49:41  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 25, column 2
+38
+IBCODE=isc_dsql_error
+>
+2019/07/19 15:50:13  Project name <Xivess> : Module name <frmAddEditBillingDoc> :Routine name <UnboundReadData> : Local error message <ท่านต้องการจะออก โดยไม่มีการบันทึกข้อมูลใช่หรือไม่> : System error message <Invalid procedure call or argument>
+2019/07/19 15:50:15  Project name <Xivess> : Module name <frmAddEditBillingDoc> :Routine name <UnboundReadData> : Local error message <ท่านต้องการจะออก โดยไม่มีการบันทึกข้อมูลใช่หรือไม่> : System error message <Invalid procedure call or argument>
+2019/07/19 15:50:16  Project name <Xivess> : Module name <frmAddEditBillingDoc> :Routine name <UnboundReadData> : Local error message <ท่านต้องการจะออก โดยไม่มีการบันทึกข้อมูลใช่หรือไม่> : System error message <Invalid procedure call or argument>
+2019/07/22 09:41:02  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+43
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:41:07  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+43
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:42:44  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+48
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:42:45  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+48
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:43:31  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+53
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:43:32  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+53
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:47:59  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+58
+IBCODE=isc_dsql_error
+>
+2019/07/22 09:48:00  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+58
+IBCODE=isc_dsql_error
+>
+2019/07/22 10:33:21  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+63
+IBCODE=isc_dsql_error
+>
+2019/07/22 10:33:24  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+63
+IBCODE=isc_dsql_error
+>
+2019/07/22 10:37:05  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+68
+IBCODE=isc_dsql_error
+>
+2019/07/22 10:37:06  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 23, column 2
+68
+IBCODE=isc_dsql_error
+>
+2019/07/22 10:37:30  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:38:29  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:39:30  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:39:31  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:56:33  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:56:34  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:58:23  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 10:58:27  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 11:10:50  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 11:10:52  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 11:14:21  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 11:14:22  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-530:
+violation of FOREIGN KEY constraint "BILLING_DOC_ID_FK" on table "EXTRA_DISCOUNT"
+Foreign key reference target does not exist
+IBCODE=isc_foreign_key
+>
+2019/07/22 13:25:56  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/22 13:25:57  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:20:42  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:20:44  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:21:28  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:21:33  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:22:47  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:22:49  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:26:48  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:26:51  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/07/23 11:42:16  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 11:42:20  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:11:13  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:11:26  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:11:58  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:11:59  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:17:49  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:17:51  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:17:56  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:17:57  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:19:05  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/07/23 13:19:06  Project name <Xivess> : Module name <clsDaily> :Routine name <AddEditBillingDoc> : Local error message <Runtime error.> : System error message <Execute:
+SQLCODE=-802:
+arithmetic exception, numeric overflow, or string truncation
+IBCODE=isc_arith_except
+>
+2019/08/05 10:26:20  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:26:23  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:27:14  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:27:16  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:27:19  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:27:20  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:28:09  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:28:10  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:28:18  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:28:22  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:29:32  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:29:34  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:29:41  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:29:50  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:29:52  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:06  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:15  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:17  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:22  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:23  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:43  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:45  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:55  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:30:57  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:31:56  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:31:57  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:33:04  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:33:05  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:33:22  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/05 10:33:24  Project name <Xivess> : Module name <clsDaily> :Routine name <QueryBillingDoc> : Local error message <ท่านต้องการจะลบข้อมูล 1 ใช่หรือไม่> : System error message <Type mismatch>
+2019/08/23 13:02:15  Project name <Xivess> : Module name <frmMasterMain> :Routine name <UnboundReadData> : Local error message <frmMasterMain> : System error message <Subscript out of range>
+2019/08/23 13:02:30  Project name <Xivess> : Module name <frmMasterMain> :Routine name <UnboundReadData> : Local error message <frmMasterMain> : System error message <Subscript out of range>
+2019/08/26 16:51:12  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-07-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-07-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+MR2.KEY_CODE
+At line 1, column 215
+IBCODE=isc_dsql_error
+>
+2019/08/26 16:51:14  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-07-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-07-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID > : System error message <Operation is not allowed when the object is closed.>
+2019/08/26 17:09:30  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+MR2.KEY_CODE
+At line 1, column 300
+IBCODE=isc_dsql_error
+>
+2019/08/26 17:09:34  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Operation is not allowed when the object is closed.>
+2019/08/26 17:11:12  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+MR2.KEY_CODE
+At line 1, column 300
+IBCODE=isc_dsql_error
+>
+2019/08/26 17:11:32  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 0015) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Operation is not allowed when the object is closed.>
+2019/08/27 10:32:27  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+MR2.KEY_CODE
+At line 1, column 300
+IBCODE=isc_dsql_error
+>
+2019/08/27 10:32:31  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Operation is not allowed when the object is closed.>
+2019/08/27 10:45:54  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+MR2.KEY_CODE
+At line 1, column 300
+IBCODE=isc_dsql_error
+>
+2019/08/27 10:45:56  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID,EN.LOCATION_ID, SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID) WHERE  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 001) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.LOCATION_ID > : System error message <Operation is not allowed when the object is closed.>
+2019/08/27 13:36:18  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID, EN.TX_TYPE,  SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE >= '2019-08-01 00:00:00')AND  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 002) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.TX_TYPE  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE >= '2019-08-01 00:00:00')AND  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 002) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.TX_TYPE > : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+MR2.KEY_CODE
+At line 1, column 277
+IBCODE=isc_dsql_error
+>
+2019/08/27 13:36:19  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT EN.PART_ITEM_ID, EN.TX_TYPE,  SUM(EN.SUM_AMOUNT) SUM_AMOUNT FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE >= '2019-08-01 00:00:00')AND  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 002) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.TX_TYPE  SQL2 -> SELECT COUNT(*)  FROM LOT_ITEM EN LEFT OUTER JOIN INVENTORY_DOC IND ON (EN.INVENTORY_DOC_ID = IND.INVENTORY_DOC_ID) WHERE  (IND.DOCUMENT_DATE >= '2019-08-01 00:00:00')AND  (IND.DOCUMENT_DATE <= '2019-08-31 23:59:59')AND  (MR2.KEY_CODE = 002) 
+AND  (EN.CANCEL_FLAG = 'N') GROUP BY EN.PART_ITEM_ID,EN.TX_TYPE > : System error message <Operation is not allowed when the object is closed.>
+2019/09/02 14:21:45  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR2.KEY_CODE LOCATION_GROUP_CODE,MR2.KEY_NAME LOCATION_GROUP_NAME,NM.*, MR1.KEY_CODE STOCK_TYPE_CODE,MR1.KEY_NAME STOCK_TYPE_NAME ,MR3.KEY_NAME UNIT_CHANGE_NAME FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N') ASC  SQL2 -> SELECT COUNT(*) FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+LI.LOCATION_ID
+At line 1, column 273
+IBCODE=isc_dsql_error
+>
+2019/09/02 14:23:22  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR2.KEY_CODE LOCATION_GROUP_CODE,MR2.KEY_NAME LOCATION_GROUP_NAME,NM.*, MR1.KEY_CODE STOCK_TYPE_CODE,MR1.KEY_NAME STOCK_TYPE_NAME ,MR3.KEY_NAME UNIT_CHANGE_NAME FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N') ASC  SQL2 -> SELECT COUNT(*) FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+LI.LOCATION_ID
+At line 1, column 273
+IBCODE=isc_dsql_error
+>
+2019/09/02 14:23:27  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR2.KEY_CODE LOCATION_GROUP_CODE,MR2.KEY_NAME LOCATION_GROUP_NAME,NM.*, MR1.KEY_CODE STOCK_TYPE_CODE,MR1.KEY_NAME STOCK_TYPE_NAME ,MR3.KEY_NAME UNIT_CHANGE_NAME FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,NM.STOCK_NO   ASC  SQL2 -> SELECT COUNT(*) FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+LI.LOCATION_ID
+At line 1, column 273
+IBCODE=isc_dsql_error
+>
+2019/09/02 14:27:20  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR2.KEY_CODE LOCATION_GROUP_CODE,MR2.KEY_NAME LOCATION_GROUP_NAME,NM.*, MR1.KEY_CODE STOCK_TYPE_CODE,MR1.KEY_NAME STOCK_TYPE_NAME ,MR3.KEY_NAME UNIT_CHANGE_NAME FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,NM.STOCK_NO   ASC  SQL2 -> SELECT COUNT(*) FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE NM ON (EN.PART_ITEM_ID = NM.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (NM.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (NM.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (LI.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+LI.LOCATION_ID
+At line 1, column 273
+IBCODE=isc_dsql_error
+>
+2019/09/02 14:27:33  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT DISTINCT EN.PART_ITEM_ID,MR2.KEY_CODE LOCATION_GROUP_CODE,MR2.KEY_NAME LOCATION_GROUP_NAME,NM.*, MR1.KEY_CODE STOCK_TYPE_CODE,MR1.KEY_NAME STOCK_TYPE_NAME ,MR3.KEY_NAME UNIT_CHANGE_NAME FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (SC.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (EN.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,SC.STOCK_NO   ASC  SQL2 -> SELECT COUNT(*) FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (SC.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (EN.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+NM.*
+At line 1, column 99
+IBCODE=isc_dsql_error
+>
+2019/09/02 14:30:27  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT DISTINCT EN.PART_ITEM_ID,MR2.KEY_CODE LOCATION_GROUP_CODE,MR2.KEY_NAME LOCATION_GROUP_NAME,NM.*, MR1.KEY_CODE STOCK_TYPE_CODE,MR1.KEY_NAME STOCK_TYPE_NAME ,MR3.KEY_NAME UNIT_CHANGE_NAME FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (SC.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (EN.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,SC.STOCK_NO   ASC  SQL2 -> SELECT COUNT(*) FROM LOT_ITEM EN LEFT OUTER JOIN STOCK_CODE SC ON (EN.PART_ITEM_ID = SC.STOCK_CODE_ID)  LEFT OUTER JOIN MASTER_REF MR1 ON (SC.STOCK_TYPE = MR1.KEY_ID) LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) LEFT OUTER JOIN MASTER_REF MR4 ON (EN.LOCATION_ID = MR4.KEY_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR4.PARENT_ID = MR2.KEY_ID) WHERE  (SC.OUTLAY_FLAG = 'N')AND  (EN.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+NM.*
+At line 1, column 99
+IBCODE=isc_dsql_error
+>
+2019/10/08 16:20:47  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD.DOCUMENT_NO,BD.DOCUMENT_DATE,BD2.DOCUMENT_NO,BD2.DOCUMENT_DATE ,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,NM2.LONG_NAME APAR_NAME,NM2.BILL_NAME APAR_BILL_NAME ,APM.APAR_CODE,APM.TAX_ID,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.PO_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.BILLING_DOC_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (BD.APAR_MAS_ID = APM.APAR_MAS_ID) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.PO_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.BILLING_DOC_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (BD.APAR_MAS_ID = APM.APAR_MAS_ID) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+BD.APAR_MAS_ID
+At line 1, column 504
+IBCODE=isc_dsql_error
+>
+2019/10/08 16:22:14  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD.DOCUMENT_NO,BD.DOCUMENT_DATE,BD2.DOCUMENT_NO,BD2.DOCUMENT_DATE ,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,NM2.LONG_NAME APAR_NAME,NM2.BILL_NAME APAR_BILL_NAME ,APM.APAR_CODE,APM.TAX_ID,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.PO_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.BILLING_DOC_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (BD.APAR_MAS_ID = APM.APAR_MAS_ID) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.PO_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.BILLING_DOC_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (BD.APAR_MAS_ID = APM.APAR_MAS_ID) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+BD.APAR_MAS_ID
+At line 1, column 504
+IBCODE=isc_dsql_error
+>
+2019/10/09 08:49:45  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT SUM(DI.ITEM_AMOUNT) TOTAL_AMOUNT , NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME  ,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N') SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Invalid expression in the select list (not contained in either an aggregate function or the GROUP BY clause)
+IBCODE=isc_dsql_error
+>
+2019/10/09 08:51:04  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT SUM(DI.ITEM_AMOUNT) TOTAL_AMOUNT , NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME  ,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N') SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Invalid expression in the select list (not contained in either an aggregate function or the GROUP BY clause)
+IBCODE=isc_dsql_error
+>
+2019/10/09 09:35:23  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,APM.APAR_CODE,APM.TAX_ID ,NM2.LONG_NAME APAR_NAME,NM2.BILL_NAME APAR_BILL_NAME,MR2.KEY_NAME UNIT_TRAN_NAME ,DI.AVE_PRICE,DI.TOTAL_PRICE,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N') SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) WHERE  (NM.DOCUMENT_TYPE = 2) 
+AND  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')AND  (DI.FREE_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+DI.AVE_PRICE
+At line 1, column 177
+IBCODE=isc_dsql_error
+>
+2019/10/09 13:55:14  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLEFROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (BD.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE DI.PO_ID IS NOT NULL  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (BD.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE DI.PO_ID IS NOT NULL  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 116
+,
+IBCODE=isc_dsql_error
+>
+2019/10/09 13:58:00  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLEFROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (BD.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE DI.PO_ID IS NOT NULL  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (BD.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE DI.PO_ID IS NOT NULL  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 116
+,
+IBCODE=isc_dsql_error
+>
+2019/10/09 13:58:05  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 116
+,
+IBCODE=isc_dsql_error
+>
+2019/10/09 13:58:58  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-104:
+Dynamic SQL Error
+SQL error code = -104
+Token unknown - line 1, column 116
+,
+IBCODE=isc_dsql_error
+>
+2019/10/09 13:59:17  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/10/09 13:59:49  Project name <Xivess> : Module name <frmReport> :Routine name <Form_Load> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/10/09 14:29:25  Project name <Xivess> : Module name <frmReport> :Routine name <Form_Load> : Local error message <> : System error message <Object variable or With block variable not set>
+2019/10/09 14:30:21  Project name <Xivess> : Module name <frmReport> :Routine name <Form_Load> : Local error message <> : System error message <Object variable or With block variable not set>
+2019/10/09 15:07:37  Project name <Xivess> : Module name <frmReport> :Routine name <Form_Load> : Local error message <> : System error message <Item cannot be found in the collection corresponding to the requested name or ordinal.>
+2019/10/09 15:09:43  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,APM.APAR_CODE,NM.LONG_NAME APAR_NAME,DI.AVG_PRICE,DI.TOTAL_PRICE,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+NM.LONG_NAME
+At line 1, column 133
+IBCODE=isc_dsql_error
+>
+2019/10/09 15:09:45  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,APM.APAR_CODE,NM.LONG_NAME APAR_NAME,DI.AVG_PRICE,DI.TOTAL_PRICE,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Operation is not allowed when the object is closed.>
+2019/10/09 15:12:09  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,APM.APAR_CODE,NM.LONG_NAME APAR_NAME,DI.AVG_PRICE,DI.TOTAL_PRICE,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+NM.LONG_NAME
+At line 1, column 133
+IBCODE=isc_dsql_error
+>
+2019/10/09 15:12:10  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT BD2.DOCUMENT_NO PO_NO,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,SC.STOCK_NO,SC.STOCK_DESC,MR2.KEY_NAME UNIT_TRAN_NAME,APM.APAR_CODE,NM.LONG_NAME APAR_NAME,DI.AVG_PRICE,DI.TOTAL_PRICE,DI.ITEM_AMOUNT,DI.UNIT_MULTIPLE FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO   SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID) LEFT OUTER JOIN BILLING_DOC BD2 ON (DI.PO_ID = BD2.BILLING_DOC_ID) LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID)  WHERE (DI.PO_ID IS NOT NULL)  AND  (NM.DOCUMENT_TYPE = 3) 
+AND  (NM.DOCUMENT_DATE >= '2019-07-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Operation is not allowed when the object is closed.>
+2019/10/10 10:50:35  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.TOTAL_PRICE,NM.DISCOUNT_AMOUNT ,NM.EXT_DISCOUNT_AMOUNT ,NM.VAT_AMOUNT ,NM.PAY_AMOUNT , NM.DOCUMENT_TYPE,NM.BILLING_DOC_ID ,MR2.KEY_CODE APAR_TYPE_CODE,MR2.KEY_NAME APAR_TYPE_NAME ,NM.APAR_MAS_ID,NM2.LONG_NAME APAR_LONG_NAME,NM2.LAST_NAME APAR_LAST_NAME ,APM.APAR_CODE,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,NM.DUE_DATE,EM.EMP_CODE SALE_CODE FROM BILLING_DOC NM LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (APM.APAR_TYPE = MR2.KEY_ID) LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID) WHERE  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_TYPE IN (3,6,7,8))AND  (APM.APAR_TYPE_CODE = '97')AND  (MR2.SHORT_CODE = '1')AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,APM.APAR_CODE ,NM.DOCUMENT_NO  SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (APM.APAR_TYPE = MR2.KEY_ID) LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID) WHERE  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_TYPE IN (3,6,7,8))AND  (APM.APAR_TYPE_CODE = '97')AND  (MR2.SHORT_CODE = '1')AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+APM.APAR_TYPE_CODE
+At line 2, column 47
+IBCODE=isc_dsql_error
+>
+2019/10/10 10:51:22  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.TOTAL_PRICE,NM.DISCOUNT_AMOUNT ,NM.EXT_DISCOUNT_AMOUNT ,NM.VAT_AMOUNT ,NM.PAY_AMOUNT , NM.DOCUMENT_TYPE,NM.BILLING_DOC_ID ,MR2.KEY_CODE APAR_TYPE_CODE,MR2.KEY_NAME APAR_TYPE_NAME ,NM.APAR_MAS_ID,NM2.LONG_NAME APAR_LONG_NAME,NM2.LAST_NAME APAR_LAST_NAME ,APM.APAR_CODE,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,NM.DUE_DATE,EM.EMP_CODE SALE_CODE FROM BILLING_DOC NM LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (APM.APAR_TYPE = MR2.KEY_ID) LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID) WHERE  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_TYPE IN (3,6,7,8))AND  (APM.APAR_TYPE_CODE = '97')AND  (MR2.SHORT_CODE = '1')AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,APM.APAR_CODE ,NM.DOCUMENT_NO  SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (APM.APAR_TYPE = MR2.KEY_ID) LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID) WHERE  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_TYPE IN (3,6,7,8))AND  (APM.APAR_TYPE_CODE = '97')AND  (MR2.SHORT_CODE = '1')AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+APM.APAR_TYPE_CODE
+At line 2, column 47
+IBCODE=isc_dsql_error
+>
+2019/10/10 10:51:30  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT NM.TOTAL_PRICE,NM.DISCOUNT_AMOUNT ,NM.EXT_DISCOUNT_AMOUNT ,NM.VAT_AMOUNT ,NM.PAY_AMOUNT , NM.DOCUMENT_TYPE,NM.BILLING_DOC_ID ,MR2.KEY_CODE APAR_TYPE_CODE,MR2.KEY_NAME APAR_TYPE_NAME ,NM.APAR_MAS_ID,NM2.LONG_NAME APAR_LONG_NAME,NM2.LAST_NAME APAR_LAST_NAME ,APM.APAR_CODE,APM.APAR_TYPE_CODE,NM.DOCUMENT_NO,NM.DOCUMENT_DATE,NM.DUE_DATE,EM.EMP_CODE SALE_CODE FROM BILLING_DOC NM LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (APM.APAR_TYPE = MR2.KEY_ID) LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID) WHERE  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_TYPE IN (3,6,7,8))AND  (APM.APAR_TYPE_CODE = '97')AND  (MR2.SHORT_CODE = '1')AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')ORDER BY MR2.KEY_CODE ASC,APM.APAR_CODE ,NM.DOCUMENT_NO  SQL2 -> SELECT COUNT(*) FROM BILLING_DOC NM LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (APM.APAR_TYPE = MR2.KEY_ID) LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID) WHERE  (APM.APAR_IND = 1) 
+AND  (NM.DOCUMENT_TYPE IN (3,6,7,8))AND  (APM.APAR_TYPE_CODE = '97')AND  (MR2.SHORT_CODE = '1')AND  (NM.DOCUMENT_DATE >= '2019-10-01 00:00:00')AND  (NM.DOCUMENT_DATE <= '2019-10-31 23:59:59')AND  (NM.CANCEL_FLAG = 'N')> : System error message <Prepare:
+SQLCODE=-206:
+Dynamic SQL Error
+SQL error code = -206
+Column unknown
+APM.APAR_TYPE_CODE
+At line 2, column 47
+IBCODE=isc_dsql_error
+>
+2019/11/12 09:37:54  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:38:10  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:38:41  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:38:44  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:39:02  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:39:29  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:39:43  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:39:47  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:40:15  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/12 09:43:52  Project name <Xivess> : Module name <> :Routine name <> : Local error message <> : System error message <This key is already associated with an element of this collection>
+2019/11/18 09:00:53  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:03:41  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:04:36  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:04:52  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:05:31  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:05:50  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:06:50  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/11/18 09:09:36  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <GetRs> : Local error message <Run time error. Can't get record set. SQL1 -> SELECT MR.* ,APM.APAR_CODE ,EM.EMP_CODE , NM.LONG_NAME EMP_NAME, NM.LAST_NAME EMP_LNAME ,EM2.EMP_CODE DEALER_CODE,NM2.LONG_NAME DEALER_NAME, NM2.LAST_NAME DEALER_LNAME,MR2.KEY_NAME KEY_NAME2 FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+ORDER BY KEY_CODE  ASC  SQL2 -> SELECT COUNT(*) FROM MASTER_REF MR LEFT OUTER JOIN APAR_MAS APM ON (MR.PARENT_EX_ID2 = APM.APAR_MAS_ID) LEFT OUTER JOIN EMPLOYEE EM ON (MR.PARENT_EX_ID = EM.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN ON (EM.EMP_ID = EN.EMP_ID) LEFT OUTER JOIN NAME NM ON (EN.NAME_ID = NM.NAME_ID) LEFT OUTER JOIN EMPLOYEE EM2 ON (MR.DEALER_ID = EM2.EMP_ID) LEFT OUTER JOIN EMPLOYEE_NAME EN2 ON (EM2.EMP_ID = EN2.EMP_ID) LEFT OUTER JOIN NAME NM2 ON (EN2.NAME_ID = NM2.NAME_ID) LEFT OUTER JOIN MASTER_REF MR2 ON (MR.PARENT_ID = MR2.KEY_ID) WHERE (KEY_CODE = 'A-01')AND  (MR.MASTER_AREA = 999) 
+> : System error message <Prepare:
+SQLCODE=-204:
+Dynamic SQL Error
+SQL error code = -204
+Ambiguous field name between table MASTER_REF and table MASTER_REF 
+KEY_CODE
+IBCODE=isc_dsql_error
+>
+2019/12/16 14:14:59  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2019/12/16 14:15:00  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2019/12/16 14:16:08  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2019/12/16 14:16:09  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
