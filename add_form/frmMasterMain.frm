@@ -11,8 +11,8 @@ Begin VB.Form frmMasterMain
    LinkTopic       =   "Form1"
    Moveable        =   0   'False
    NegotiateMenus  =   0   'False
-   ScaleHeight     =   8490
-   ScaleWidth      =   11880
+   ScaleHeight     =   12930
+   ScaleWidth      =   23760
    StartUpPosition =   1  'CenterOwner
    WindowState     =   2  'Maximized
    Begin Threed.SSFrame SSFrame1 

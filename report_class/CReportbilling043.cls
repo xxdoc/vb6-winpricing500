@@ -6,7 +6,7 @@ BEGIN
   DataSourceBehavior  = 0  'vbNone
   MTSTransactionMode  = 0  'NotAnMTSObject
 END
-Attribute VB_Name = "CReportBilling018"
+Attribute VB_Name = "CReportBilling043"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
@@ -294,11 +294,13 @@ Dim TempStr1 As String
 Dim TempStr2 As String
 Dim Total1(30) As Double
 Dim Total2(30) As Double
+Dim Total3(30) As Double
 Dim SumRow As Double
 Dim iCount As Long
 Dim TempStr As String
 Dim PrevKey1 As String
 Dim PrevKey2 As String
+Dim PrevKey3 As String
 Dim TotalMove As CBillingDoc
 Dim m_BillingDoc As CBillingDoc
 
@@ -321,6 +323,7 @@ Dim ToDate As Date
    For j = 1 To UBound(Total1)
       Total1(j) = 0
       Total2(j) = 0
+      Total3(j) = 0
    Next j
 
    mblnHeader = False
@@ -347,7 +350,9 @@ Dim ToDate As Date
    m_BillingDoc.FROM_STOCK_NO = mcolParam("FROM_STOCK_NO")
    m_BillingDoc.TO_STOCK_NO = mcolParam("TO_STOCK_NO")
    m_BillingDoc.FREE_FLAG = StringToFreeFlag(mcolParam("INCLUDE_FREE"))
-   Call m_BillingDoc.QueryData(26, Rs, iCount)
+   m_BillingDoc.FROM_SALE_CODE = mcolParam("FROM_SALE_CODE")
+   m_BillingDoc.TO_SALE_CODE = mcolParam("TO_SALE_CODE")
+   Call m_BillingDoc.QueryData(177, Rs, iCount)
 
    I = 0
    If Not Rs.EOF Then
@@ -359,10 +364,10 @@ Dim ToDate As Date
    While Not Rs.EOF
       I = I + 1
       Call m_Details1.ClearField
-      Call m_BillingDoc.PopulateFromRS(26, Rs)
+      Call m_BillingDoc.PopulateFromRS2(177, Rs)
 
-
-      If PrevKey1 <> m_BillingDoc.APAR_CODE And I <> 1 Then
+    
+     If PrevKey1 <> m_BillingDoc.APAR_CODE And I <> 1 Then
          If mcolParam("SHOW_SUMMARY") = 0 Then
             Call GenerateFooter("รวม ", PrevKey2, Total1, m_Details1, 0)
          Else
@@ -376,6 +381,21 @@ Dim ToDate As Date
          Call Vsp.AddTable(strFormat, "", TempStr2)
          Vsp.FontBold = False
 
+          If PrevKey3 <> m_BillingDoc.SALE_CODE Then
+               Call GenerateFooter("รวมพนักงานขาย ", PrevKey3, Total3, m_Details1, 0)
+               Call m_Details1.GetString(1, TempStr1, TempStr2)
+               strFormat = VSP_CalTable(TempStr1, mdblWid, alngX)
+               Vsp.FontBold = True
+               Call Vsp.AddTable(strFormat, "", TempStr2)
+               Vsp.FontBold = False
+                  
+                 Vsp = "พนักงานขาย  :  " & m_BillingDoc.SALE_LONG_NAME & " " & m_BillingDoc.SALE_LAST_NAME & " ( " & m_BillingDoc.SALE_CODE & " ) "
+                 
+                  For j = 1 To UBound(Total1)
+                     Total3(j) = 0
+                  Next j
+          End If
+          
          If mcolParam("SHOW_SUMMARY") = 0 Then
             Vsp = "ลูกค้า  :  " & m_BillingDoc.APAR_NAME & " ( " & m_BillingDoc.APAR_CODE & " ) "
          End If
@@ -383,14 +403,20 @@ Dim ToDate As Date
          For j = 1 To UBound(Total1)
             Total1(j) = 0
          Next j
+         
+           
       ElseIf I = 1 Then
+        Vsp = "พนักงานขาย  :  " & m_BillingDoc.SALE_LONG_NAME & " " & m_BillingDoc.SALE_LAST_NAME & " ( " & m_BillingDoc.SALE_CODE & " ) "
          If mcolParam("SHOW_SUMMARY") = 0 Then
             Vsp = "ลูกค้า  :  " & m_BillingDoc.APAR_NAME & " ( " & m_BillingDoc.APAR_CODE & " ) "
          End If
       End If
+      
+
 
       PrevKey1 = m_BillingDoc.APAR_CODE
       PrevKey2 = m_BillingDoc.APAR_NAME
+      PrevKey3 = m_BillingDoc.SALE_CODE
       SumRow = 0
       Call m_Details1.ClearField
 
@@ -427,6 +453,7 @@ Dim ToDate As Date
                TempStr = FormatNumberToNull(Amt)
                Total1(j) = Total1(j) + Amt
                Total2(j) = Total2(j) + Amt
+               Total3(j) = Total3(j) + Amt
                SumRow = SumRow + Amt
                Call BodyCf.SetFieldValue(HeadCf.Width, HeadCf.BodyAlign, TempStr)
                Call m_Details1.AddField(BodyCf)
@@ -439,6 +466,7 @@ Dim ToDate As Date
             TempStr = FormatNumberToNull(SumRow)
             Total1(j) = Total1(j) + SumRow
             Total2(j) = Total2(j) + SumRow
+            Total3(j) = Total3(j) + SumRow
             Call BodyCf.SetFieldValue(HeadCf.Width, HeadCf.BodyAlign, TempStr)
             Call m_Details1.AddField(BodyCf)
       End If
@@ -459,6 +487,7 @@ Dim ToDate As Date
          TempStr = FormatNumberToNull(Amt)
          Total1(j) = Total1(j) + Amt
          Total2(j) = Total2(j) + Amt
+         Total3(j) = Total3(j) + Amt
          SumRow = SumRow + Amt
          Call BodyCf.SetFieldValue(HeadCf.Width, HeadCf.BodyAlign, TempStr)
          Call m_Details1.AddField(BodyCf)
@@ -471,6 +500,7 @@ Dim ToDate As Date
       TempStr = FormatNumberToNull(SumRow)
       Total1(j) = Total1(j) + SumRow
       Total2(j) = Total2(j) + SumRow
+      Total3(j) = Total3(j) + SumRow
       Call BodyCf.SetFieldValue(HeadCf.Width, HeadCf.BodyAlign, TempStr)
       Call m_Details1.AddField(BodyCf)
 
@@ -494,6 +524,14 @@ Dim ToDate As Date
    End If
    Call Vsp.AddTable(strFormat, "", TempStr2)
    Vsp.FontBold = False
+   
+   Call GenerateFooter("รวมพนักงานขาย ", PrevKey3, Total3, m_Details1, 0)
+   Call m_Details1.GetString(1, TempStr1, TempStr2)
+   strFormat = VSP_CalTable(TempStr1, mdblWid, alngX)
+   Vsp.FontBold = True
+   Call Vsp.AddTable(strFormat, "", TempStr2)
+   Vsp.FontBold = False
+               
 
    Call GenerateFooter("สุทธิ", "", Total2, m_Details1, 0)
    Call m_Details1.GetString(1, TempStr1, TempStr2)
@@ -628,6 +666,8 @@ Private Sub GenerateEndDoc()
       Vsp.Paragraph = "*สรุป"
    End If
 End Sub
+
+
 
 
 

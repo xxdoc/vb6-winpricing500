@@ -577,6 +577,9 @@ Dim Node As Node
       Set Node = trvMaster.Nodes.add(ROOT_TREE & " S-1", tvwChild, ROOT_TREE & " S-2-17-1", MapText("รายงานสรุปยอดขาย แจกแจงเป็นงวด แยกตาม เขตการขาย ลูกค้า สินค้า"), 1, 2)
       Node.Expanded = False
       
+      Set Node = trvMaster.Nodes.add(ROOT_TREE & " S-1", tvwChild, ROOT_TREE & " S-2-17-2", MapText("รายงานสรุปยอดขาย แจกแจงเป็นงวด แยกตาม พนักงานขาย ลูกค้า สินค้า"), 1, 2)
+      Node.Expanded = False
+      
       Set Node = trvMaster.Nodes.add(ROOT_TREE & " S-1", tvwChild, ROOT_TREE & " S-2-18", MapText("รายงานสรุปยอดขาย แยกตามหมวดสินค้า"), 1, 2)
       Node.Expanded = False
       
@@ -1119,6 +1122,9 @@ Dim ClassName As String
    ElseIf Key = "Root S-2-17-1" Then
       Set Report = New CReportBilling040
       ClassName = "CReportBilling040"
+   ElseIf Key = "Root S-2-17-2" Then
+      Set Report = New CReportBilling043
+      ClassName = "CReportBilling043"
    ElseIf Key = "Root S-2-18" Then
       Set Report = New CReportBilling019
       ClassName = "CReportBilling019"
@@ -2020,7 +2026,7 @@ Dim Comb As ComboBox
             End If
          End If
          
-         If trvMaster.SelectedItem.Key = ROOT_TREE & " S-2-17" Or trvMaster.SelectedItem.Key = ROOT_TREE & " S-2-17-1" Or _
+         If trvMaster.SelectedItem.Key = ROOT_TREE & " S-2-17" Or trvMaster.SelectedItem.Key = ROOT_TREE & " S-2-17-1" Or trvMaster.SelectedItem.Key = ROOT_TREE & " S-2-17-2" Or _
          trvMaster.SelectedItem.Key = ROOT_TREE & " S-2-13" Or trvMaster.SelectedItem.Key = ROOT_TREE & " B-1-4" Then
             If C.ComboLoadID = 1 Then
                Call InitThaiMonth(m_Combos(C.ControlIndex))
@@ -2646,6 +2652,8 @@ Dim QueryFlag As Boolean
       Call InitReportS_2_17
    ElseIf Node.Key = ROOT_TREE & " S-2-17-1" Then
       Call InitReportS_2_17_1
+   ElseIf Node.Key = ROOT_TREE & " S-2-17-2" Then
+      Call InitReportS_2_17_2
    ElseIf Node.Key = ROOT_TREE & " S-2-18" Then
       Call InitReportS_2_18
    ElseIf Node.Key = ROOT_TREE & " S-2-18-1" Then
@@ -7247,6 +7255,55 @@ Dim Offset As Long
    
    Call LoadControl("CH", cboGeneric(0).Width, True, "สรุป", , "SHOW_SUMMARY")
    Call LoadControl("CH", cboGeneric(0).Width, True, "รวมรายการของแถม", , "INCLUDE_FREE")
+   
+   Call ShowControl
+   Call LoadComboData
+   
+End Sub
+Private Sub InitReportS_2_17_2()
+Dim C As CReportControl
+Dim Top As Long
+Dim Left As Long
+Dim LabelWidth As Long
+Dim Offset As Long
+
+   Top = lblGeneric(0).Top
+   Left = lblGeneric(0).Left
+   LabelWidth = lblGeneric(0).Width
+   Offset = 100
+   
+   '1 =============================
+   Call LoadControl("C", cboGeneric(0).Width \ 2, False, "", 1, "FROM_MONTH_ID", "FROM_MONTH_NAME")
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("จากเดือน"))
+
+   '2 =============================
+   Call LoadControl("T", txtGeneric(0).Width / 2, False, "", , "FROM_YEAR_NO")
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("จากปี"))
+   
+   '1 =============================
+   Call LoadControl("C", cboGeneric(0).Width \ 2, False, "", 2, "TO_MONTH_ID", "TO_MONTH_NAME")
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("ถึงเดือน"))
+
+   '2 =============================
+   Call LoadControl("T", txtGeneric(0).Width / 2, False, "", , "TO_YEAR_NO")
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("ถึงปี"))
+      
+   '3 =============================
+   Call LoadControl("T", txtGeneric(0).Width / 2, True, "", , "FROM_APAR_CODE", , "CUSTOMER_CODE")
+   Call LoadControl("T", txtGeneric(0).Width / 2, True, "", , "TO_APAR_CODE", , "CUSTOMER_CODE", True)
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("รหัสลูกค้า"))
+   
+   Call LoadControl("T", txtGeneric(0).Width / 2, True, "", , "FROM_STOCK_NO", , "STOCK_NO")
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("รหัสวัตถุดิบ"))
+   Call LoadControl("T", txtGeneric(0).Width / 2, True, "", , "TO_STOCK_NO", , "STOCK_NO", True)
+      
+   Call LoadControl("T", txtGeneric(0).Width / 2, True, "", , "FROM_SALE_CODE", , "SALE_CODE")
+   Call LoadControl("L", lblGeneric(0).Width, True, MapText("รหัสพนักงานขาย"))
+   Call LoadControl("T", txtGeneric(0).Width / 2, True, "", , "TO_SALE_CODE", , "SALE_CODE", True)
+   
+   Call LoadControl("CH", cboGeneric(0).Width, True, "สรุป", , "SHOW_SUMMARY")
+   Call LoadControl("CH", cboGeneric(0).Width, True, "รวมรายการของแถม", , "INCLUDE_FREE")
+    Call LoadControl("CH", cboGeneric(0).Width, True, "ไม่แสดงจำนวน", , "NOT_SHOW_AMOUNT")
    
    Call ShowControl
    Call LoadComboData

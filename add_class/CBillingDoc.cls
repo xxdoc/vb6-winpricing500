@@ -855,6 +855,7 @@ Dim TempDate As String
       FromStr = FromStr & "LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) "
       FromStr = FromStr & "LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) "
       
+      
       TempStr = ""
       
       TempStr = "WHERE "
@@ -1331,16 +1332,16 @@ WhereStr = WhereStr & TempStr & " (DI.FREE_FLAG = 'N' AND PL.BRANCH_ID IS NULL) 
       FromStr = "FROM BILLING_DOC NM "
       FromStr = FromStr & "LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) "
       FromStr = FromStr & "LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) "
-      
       FromStr = FromStr & "LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) "
       FromStr = FromStr & "LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) "
       FromStr = FromStr & "LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) "
-      
       FromStr = FromStr & "LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID ) "
-      
+      FromStr = FromStr & "LEFT OUTER JOIN EMPLOYEE_NAME EN1 ON (EM.EMP_ID = EN1.EMP_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN NAME NM3 ON (EN1.NAME_ID = NM3.NAME_ID) "
       FromStr = FromStr & "LEFT OUTER JOIN MASTER_REF MR4 ON (NM.CUSTOMER_BRANCH = MR4.KEY_ID) "
-      
       FromStr = FromStr & "LEFT OUTER JOIN PRINT_LABEL PL ON (DI.DOC_ITEM_ID = PL.DOC_ITEM_ID) "
+      
+      
       
       TempStr = "WHERE "
       WhereStr = WhereStr & TempStr & " (DI.FREE_FLAG = 'N' AND PL.BRANCH_ID IS NULL) " & vbCrLf
@@ -3817,6 +3818,32 @@ ElseIf Ind = 124 Then 'GetDistinctEmpAparDocTypeFree
       FromStr = FromStr & "LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) "
       FromStr = FromStr & "LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) "
       FromStr = FromStr & "LEFT OUTER JOIN MASTER_REF MR2 ON (DI.UNIT_TRAN_ID = MR2.KEY_ID) "
+    ElseIf Ind = 177 Then 'สำหรับ report billing043
+      SelectStr1 = "SELECT DISTINCT SC.STOCK_NO,SC.STOCK_DESC,SC.UNIT_AMOUNT "
+      SelectStr1 = SelectStr1 & ",APM.APAR_CODE,NM2.LONG_NAME APAR_NAME "
+      SelectStr1 = SelectStr1 & ",EM.EMP_CODE SALE_CODE ,NM3.LONG_NAME SALE_LONG_NAME,NM3.LAST_NAME SALE_LAST_NAME "
+      SelectStr1 = SelectStr1 & ",MR2.KEY_NAME UNIT_NAME "
+      SelectStr1 = SelectStr1 & ",MR3.KEY_NAME UNIT_CHANGE_NAME "
+      
+      SelectStr2 = "SELECT COUNT(*) "
+      
+      FromStr = "FROM BILLING_DOC NM "
+      FromStr = FromStr & "LEFT OUTER JOIN DOC_ITEM DI ON (NM.BILLING_DOC_ID = DI.BILLING_DOC_ID ) "
+      FromStr = FromStr & "LEFT OUTER JOIN STOCK_CODE SC ON (DI.PART_ITEM_ID = SC.STOCK_CODE_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN APAR_MAS APM ON (NM.APAR_MAS_ID = APM.APAR_MAS_ID ) "
+      FromStr = FromStr & "LEFT OUTER JOIN APAR_NAME EN ON (APM.APAR_MAS_ID = EN.APAR_MAS_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN NAME NM2 ON (EN.NAME_ID = NM2.NAME_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN MASTER_REF MR2 ON (SC.UNIT_ID = MR2.KEY_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN MASTER_REF MR3 ON (SC.UNIT_CHANGE_ID = MR3.KEY_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN EMPLOYEE EM ON (NM.SALE_BY = EM.EMP_ID ) "
+      FromStr = FromStr & "LEFT OUTER JOIN EMPLOYEE_NAME EN1 ON (EM.EMP_ID = EN1.EMP_ID) "
+      FromStr = FromStr & "LEFT OUTER JOIN NAME NM3 ON (EN1.NAME_ID = NM3.NAME_ID) "
+      
+      
+      TempStr = ""
+      
+      TempStr = "WHERE "
+      WhereStr = WhereStr & TempStr & " (SC.STOCK_NO IS NOT NULL ) "
    End If
    
    If BILLING_DOC_ID > 0 Then
@@ -4700,6 +4727,8 @@ ElseIf Ind = 95 Then   '  CReportBillingDoc021 /ROOT_TREE&"S-2-21"/InitReportS_2
       OrderByStr = "ORDER BY SC.STOCK_NO ASC,NM.DOCUMENT_DATE ASC,NM.DOCUMENT_NO "
    ElseIf Ind = 175 Then
       OrderByStr = "ORDER BY NM.DOCUMENT_NO,BD2.DOCUMENT_NO  "
+   ElseIf Ind = 177 Then
+      OrderByStr = "ORDER BY NM.SALE_BY ASC,APM.APAR_CODE ASC,SC.STOCK_NO "
    End If
    
 '    If DocumentNo = 1 Then
@@ -5154,6 +5183,7 @@ Public Sub PopulateFromRS(Ind As Long, Rs As ADODB.Recordset)
       UNIT_AMOUNT = NVLD(Rs("UNIT_AMOUNT"), 0)
       APAR_CODE = NVLS(Rs("APAR_CODE"), "")
       APAR_NAME = NVLS(Rs("APAR_NAME"), "")
+   
    ElseIf Ind = 27 Then
       TOTAL_PRICE = NVLD(Rs("TOTAL_PRICE"), 0)
       DISCOUNT_AMOUNT = NVLD(Rs("DISCOUNT_AMOUNT"), 0)
@@ -5462,6 +5492,7 @@ Public Sub PopulateFromRS(Ind As Long, Rs As ADODB.Recordset)
       
       CUSTOMER_BRANCH_CODE = NVLS(Rs("CUSTOMER_BRANCH_CODE"), "")
       CUSTOMER_BRANCH_NAME = NVLS(Rs("CUSTOMER_BRANCH_NAME"), "")
+      
    ElseIf Ind = 49 Then
       
       APAR_CODE = NVLS(Rs("APAR_CODE"), "")
@@ -6410,6 +6441,18 @@ Public Sub PopulateFromRS2(Ind As Long, Rs As ADODB.Recordset)
       APAR_NAME = NVLS(Rs("APAR_NAME"), "")
       APAR_BILL_NAME = NVLS(Rs("APAR_BILL_NAME"), "")
       TAX_ID = NVLS(Rs("TAX_ID"), "")
+   ElseIf Ind = 177 Then
+      STOCK_NO = NVLS(Rs("STOCK_NO"), "")
+      STOCK_DESC = NVLS(Rs("STOCK_DESC"), "")
+      UNIT_CHANGE_NAME = NVLS(Rs("UNIT_CHANGE_NAME"), "")
+      UNIT_NAME = NVLS(Rs("UNIT_NAME"), "")
+      UNIT_AMOUNT = NVLD(Rs("UNIT_AMOUNT"), 0)
+      APAR_CODE = NVLS(Rs("APAR_CODE"), "")
+      APAR_NAME = NVLS(Rs("APAR_NAME"), "")
+      
+      SALE_CODE = NVLS(Rs("SALE_CODE"), "")
+      SALE_LONG_NAME = NVLS(Rs("SALE_LONG_NAME"), "")
+      SALE_LAST_NAME = NVLS(Rs("SALE_LAST_NAME"), "")
    End If
 End Sub
 Public Function UndoCommit() As Boolean
