@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{0BA686C6-F7D3-101A-993E-0000C0EF6F5E}#2.0#0"; "THREED20.OCX"
-Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.0#0"; "mscomctl.ocx"
+Object = "{831FDD16-0C5C-11D2-A9FC-0000F8754DA1}#2.2#0"; "MSCOMCTL.OCX"
 Begin VB.Form frmWinPricingMain 
    ClientHeight    =   8520
    ClientLeft      =   60
@@ -1733,7 +1733,7 @@ Private Sub Timer1_Timer()
    lblUserGroup.Caption = MapText("กลุ่มผู้ใช้ : ") & " " & glbUser.GROUP_NAME
 
 
- Timer1.Enabled = True   ' เปิด - ปิด timer ก่อน build program
+ 'Timer1.Enabled = True   ' เปิด - ปิด timer ก่อน build program
 
 End Sub
 Private Sub trvMain_NodeClick(ByVal Node As MSComctlLib.Node)

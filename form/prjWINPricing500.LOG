@@ -1069,3 +1069,23 @@ IBCODE=isc_login
 Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
 IBCODE=isc_login
 >
+2020/01/02 14:56:19  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2020/01/02 14:56:20  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2020/01/02 14:56:53  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2020/01/02 14:56:54  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase2> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
+2020/01/02 14:57:21  Project name <Xivess> : Module name <clsDatabaseMngr> :Routine name <ConnectDatabase> : Local error message <Runtime error.> : System error message <SQLCODE=-902:
+Your user name and password are not defined. Ask your database administrator to set up a Firebird login.
+IBCODE=isc_login
+>
